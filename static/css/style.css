@@ -1,0 +1,254 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  background-color: black;
+}
+
+:root{
+  --colorHeading: #49a3eb;
+}
+
+h1{
+  color: var(--colorHeading);
+  font-size: 3rem;
+  width: 90%;
+  margin: 35px auto;
+}
+
+/* <nav> */
+header{
+  --colorPrimary: #0cda87;
+  --colorSecondary: #6af1f9;
+  --defBG: #3a3a3a;
+  --logoFamily:'Kolker Brush', cursive;
+  --fontNormal: 'Mukta', sans-serif;
+  --fontSizeM: 2rem;
+  --fontSizeS: 1.5rem;
+}
+
+header{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+  padding: 10px 25px;
+  background-color: var(--defBG);
+  border-radius: 30px;
+}
+
+#headerLeft{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+#logo{
+  color: var(--colorPrimary);
+  font-size: var(--fontSizeM);
+  font-family: var(--logoFamily);
+  user-select: none;
+}
+
+nav{
+  margin: 15px;
+}
+
+nav ul{
+  display: flex;
+  align-items: center;
+}
+
+nav ul li{
+  margin: 0px 15px;
+  font-size: var(--fontSizeS);
+  list-style-type: none;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-family: var(--fontNormal);
+}
+
+nav ul li a:hover{
+  color: var(--colorSecondary);
+}
+
+#headerRight{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+#headerRight form{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+#headerRight form input{
+  padding: 5px 10px;
+  font-size: var(--fontSizeS);
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  font-family: var(--fontNormal);
+}
+
+#headerRight form button{
+  padding: 5px 10px;
+  font-size: var(--fontSizeS);
+  border-radius: 20px;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+#headerRight form button:hover{
+  background-color: white;
+}
+
+@media screen and (max-width: 894px){
+  header{
+    flex-direction: column;
+    background-color: black;
+    gap: 25px;
+    width: 100%;
+  }
+
+  #headerLeft{
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 15px;
+    background-color: var(--defBG);
+    border-radius:  30px;
+    padding-left: 20px;
+  }
+  
+  #headerRight,
+  #headerRight form,
+  #headerRight form input{
+    width: 100%;
+  }
+}
+/* </nav> */
+
+/* <section id="songs"> */
+#songs{
+  --cardBG: #3a3a3a;
+  --colorHeading: #519f9f;
+  --colorPara: yellow;
+  --btnBG: #20a223;
+  --btnColor: white;
+  --fontSizeL: 2rem;
+  --fontSizeM: 1.5rem;
+
+  margin: 35px auto;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+/* <div class="song"> */
+.song{
+  padding: 15px;
+  margin: 10px;
+  background-color: var(--cardBG);
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 300px;
+  gap: 25px;
+}
+.song h2{
+  color: var(--colorHeading);
+  font-size: var(--fontSizeL);
+}
+.song p{
+  color: var(--colorPara);
+  font-size: var(--fontSizeM);
+}
+.song button{
+  padding: 10px;
+  font-size: var(--fontSizeM);
+  background-color: var(--btnBG);
+  color: var(--btnColor);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.song button:hover{
+  color: var(--btnBG);
+  background-color: var(--btnColor)
+}
+@media screen and (max-width: 366px){
+  .song{
+    max-width: 95vw;
+    width: 95vw;
+  }
+  #songs{
+    padding: 5px;
+  }
+}
+/* </div> */
+/* </section> */
+
+/* <div class="progressBar"> */
+#progressBar{
+  --defBG: #3a3a3a;
+  
+  width: 100%;
+  background-color: var(--defBG);
+  padding: 25px;
+  position: sticky;
+  bottom: 0px;
+  display: none;
+}
+#progressBar input{
+  width: 100%;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+#progressBar #progressBtns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#progressBar .btnPN{
+  border-radius: 100%;
+  cursor: pointer;
+}
+#progressBar #previous{
+  transform: rotate(180deg);
+}
+#progressBar .btnPN img{
+  width: 40px;
+}
+#progressBar #play{
+  border-radius: 100%;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+/* </div> */
+
+/* responsive font size */
+@media screen and (max-width: 512px){
+  html{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 430px){
+  html{
+    font-size: 12px;
+  }
+}

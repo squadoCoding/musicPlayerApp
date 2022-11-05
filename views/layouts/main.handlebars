@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="INDEX, FOLLOW" />
+    <meta name="description" content="description here" />
+    <link rel="stylesheet" href ="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Importing Logo Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap" rel="stylesheet"> 
+    <!--Importing normal font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet"> 
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <header>
+      <div id="headerLeft">
+        <div id="logo">
+          X-PlaY
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="headerRight">
+        <form>
+          <input type="text" placeholder="Search a song" name="searchTerm" id="searchASong">
+          <button>&#128269;</button>
+        </form>
+      </div>
+    </header>
+    <main>
+      {{{body}}}
+    </main>
+    <script src="/js/index.js"></script>
+    <script>
+      songs = [
+        {{#each songs}}
+            {
+                name: "{{this.name}}",
+                path: "{{this.path}}",
+                index: {{this.index}}
+            }
+            {{#unless @last}},{{/unless}}
+        {{/each}}
+      ];
+    </script>
+  </body>
+</html>

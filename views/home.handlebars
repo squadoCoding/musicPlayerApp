@@ -1,0 +1,19 @@
+<h1>&#127911; Latest Songs</h1>
+<section id="songs">
+    {{#each songs}}
+      <div class="song">
+        <img src="{{this.cover}}" alt=""/>
+        <h2>{{this.name}}</h2>
+        <p>{{this.description}}</p>
+        <button class="btnPlay" onclick="this.innerText=='Play'?playSong({{this.index}}):stopSong();this.innerText = this.innerText=='Play'?'Playing':'Play';showProgressBar()">Play</button>
+      </div>
+    {{/each}}
+</section>
+<div id="progressBar">
+  <input type="range" value="0" id="progress"/>
+  <div id="progressBtns">
+    <button class="btnPN" id="previous"><img src="/img/next.svg"></button>
+    <button id="play"><img src="/img/play.png"/></button>
+    <button class="btnPN" id="next"><img src="/img/next.svg"></button>
+  </div>
+</div>

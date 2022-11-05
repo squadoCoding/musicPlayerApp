@@ -1,0 +1,11 @@
+{
+  "Songs": [
+    {
+      "index": 0,
+      "name": "Powerful Beats",
+      "description": "A power booster for you to increase your energy.",
+      "path": "/songs/powerful-beat.mp3",
+      "cover": "/covers/power-beat.jpg"
+    }
+  ]
+}
